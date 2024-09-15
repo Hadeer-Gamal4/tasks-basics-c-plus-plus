@@ -1,0 +1,377 @@
+//task 1
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int x;
+//	cin>>x;
+//	cout<<x<<"\n";
+//}
+
+//task 2
+//#include <iostream>
+//using namespace std;
+//int main (){
+//	int sum;
+//	int x;
+//	cout<<"please enter first number"<<"\n";
+//	cin>>x;
+//	int y;
+//	cout<<"please enter second number"<<"\n";
+//	cin>>y;
+//	int z;
+//	cout<<"please enter third number"<<"\n";
+//	cin>>z;
+//	sum=x+y+z;
+//	cout<<"the summation of 3 integers is "<<sum<<"\n";
+//	
+//	return 0;
+//}
+
+
+//task 3
+//#include<iostream>
+//using namespace std;
+//int main(){
+//	double a;
+//	int x;
+//	cout<<"please enter first number: \n";
+//	cin>>x;
+//	int y;
+//	cout<<"please enter second number: \n";
+//	cin>>y;
+//	int z;
+//	cout<<"please enter third number: \n";
+//	cin>>z;
+//	a=((double)x+y+z)/3;
+//	cout<<"the average : "<<a<<"\n";
+//}
+
+
+//task 4
+//#include <iostream>
+//using namespace std;
+//int main (){
+//	int p;
+//	int a;
+//	int x;
+//	cout<<"please enter the width "<<"\n";
+//	cin>>x;
+//	int y;
+//	cout<<"please enter the height "<<"\n";
+//	cin>>y;
+//	p=2*(x+y);
+//	a=x*y;
+//	cout<<"the perimeter= "<<p<<"\n";
+//	cout<<"the area= "<<a<<"\n";	
+//}
+
+
+//task 5
+//#include<iostream>
+//using namespace std;
+//int main(){
+//	int sum;
+//	int x;
+//	cout<<"please enter the first digit of the num"<<"\n";
+//	cin>>x;
+//	int y;
+//	cout<<"please enter the second digit of the num"<<"\n";
+//	cin>>y;
+//	int z;
+//	cout<<"please enter the third digit of the num"<<"\n";
+//	cin>>z;
+//	sum=x+y+z;
+//	cout<<sum<<"\n";	
+//}
+
+
+
+//task 6
+//#include <iostream>
+//using namespace std;
+//int main (){
+//	int h;
+//	int m;
+//	int s;
+//	int x;
+//	cin>>x;
+//	h=x/(60*60);
+//	m=x%(60*60);
+//	if (m>=60){
+//		s=m-60;
+//		m=1;
+//	}
+//	cout<<"H:M:S"<<"-"<<h<<":"<<m<<":"<<s<<endl;
+//	return 0;	
+//}
+
+
+//task 7
+//#include <iostream>
+//using namespace std;
+//int main (){
+//	
+//	int x;
+//	cout<<"please enter number"<<"\n";
+//	cin>>x;
+//	if(x>0){
+//		cout<<"positive"<<"\n";
+//	}else if(x<0){
+//		cout<<"negative"<<"\n";
+//	}
+//	else {
+//		cout<<"it is zero!"<<"\n";
+//	}
+//	return 0;
+//}
+
+//task 8
+//#include<iostream>
+//using namespace std;
+//int main(){
+//	int x;
+//	cout<<"please enter digit from 1 to 5 :"<<"\n";
+//	cin>>x;
+//	if (x>=1 && x<=5)
+//	{
+//	if(x==1){
+//		cout<<"one"<<"\n";
+//		
+//	}else if(x==2){
+//		cout<<"two"<<"\n";
+//	}
+//	else if(x==3){
+//		cout<<"three"<<"\n";
+//		
+//	}
+//	else if(x==4){
+//		cout<<"four"<<"\n";
+//		
+//	}
+//	else{
+//		cout<<"five"<<"\n";
+//	}
+//}
+//return 0;
+//}
+
+
+//task 9
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int x,sum=0;
+//	for (int i=1 ; i<=5 ; i++){
+//		cin >>x;
+//		if (x%2 != 0){
+//		sum+=x;	
+//		}
+//	}
+//	cout<<sum<<"\n";
+//	
+//	return 0;
+//}
+
+//task 10
+//#include <iostream >
+//using namespace std;
+//int main(){
+//	int x;
+//	cout<<"please enter a year to check it "<<"\n";
+//	cin>>x;
+//	if (x%4==0 || x%400==0){
+//		cout<<" a leap year "<<"\n";
+//	}
+//	else {
+//		cout<<" not a leap year "<<"\n";
+//	}
+//	return 0;
+//}
+
+
+//task 11
+//#include <iostream>
+//using namespace std;
+//int main(){
+//	int x,z;
+//	cout<<"please enter the birth year:"<<"\n";
+//	cin>>x;
+//	z=2023-x;
+//	if (z>18){
+//		cout<<"above 18"<<"\n";
+//	}
+//	else {
+//		cout<<"not above 18"<<"\n";
+//	}
+//	return 0;
+//}
+
+
+
+//task 12
+//#include <iostream>
+//using namespace std;
+//int main(){
+//	int x;
+//	cout<<"please enter your marks"<<"\n";
+//	cin>>x;
+//	if(x<25){
+//		cout<<"F"<<"\n";
+//	} 
+//	else if(x>=25 && x<45){
+//		cout<<"E"<<"\n";
+//	}
+//	else if(x>=45 && x<50){
+//		cout<<"D"<<"\n";
+//	}
+//	else if(x>=50 && x<60){
+//		cout<<"C"<<"\n";
+//	}
+//	else if(x>=60 && x<80){
+//		cout<<"B"<<"\n";
+//	}
+//	else {
+//		cout<<"A"<<"\n";
+//	}
+//	return 0;
+//}
+
+
+//task 13
+//#include <iostream>
+//using namespace std;
+//int main(){
+//	int x;
+//	cout<<"please enter number from 1 to 12 \n";
+//	cin>>x;
+//	switch (x){
+//		case 1:{
+//			cout<<"january"<<"\n";
+//			break;
+//		}
+//		case 2 :{
+//			cout<<"febraury"<<"\n";
+//			break;
+//		}
+//		case 3 :{
+//			cout<<"march"<<"\n";
+//			break;
+//		}
+//		case 4 :{
+//			cout<<"april"<<"\n";
+//			break;
+//		}
+//		case 5:{
+//			cout<<"may"<<"\n";
+//			break;
+//		}
+//		case 6:{
+//			cout<<"june"<<"\n";
+//			break;
+//		}
+//		case 7:{
+//			cout<<"july"<<"\n";
+//			break;
+//		}
+//		case 8:{
+//			cout<<"augest"<<"\n";
+//			break;
+//		}
+//		case 9:{
+//			cout<<"september"<<"\n";
+//			break;
+//		}
+//		case 10:{
+//			cout<<"october"<<"\n";
+//			break;
+//		}
+//		case 11:{
+//			cout<<"novamber"<<"\n";
+//			break;
+//		}
+//		case 12:{
+//			cout<<"december"<<"\n";
+//			break;
+//		}
+//		default : {
+//			cout <<"i want number from 1 to 12 "<<"\n";
+//
+//		}
+//	}
+//	return 0;
+//}
+
+
+//task 14
+//#include <iostream>
+//using namespace std ;
+//int main(){
+//	int x;
+//	cin>>x;
+//	(x%2==0)? cout<<"even" : cout<<"odd";	
+//}
+
+//task 15
+//#include <iostream>
+//using namespace std;
+//int main (){
+//	char x;
+//	cin>>x;
+//	if(x=='a'|| x=='e'|| x=='i'|| x=='o'|| x=='u'){
+//		cout<<"vowel"<<"\n";
+//	}
+//	else {
+//		cout<<"consonant"<<"\n";
+//	}
+//	return 0;
+//}
+
+
+//task 16
+//#include <iostream>
+//using namespace std;
+//int main()
+//{
+//int x,y,z;
+//cin>>x>>y>>z;
+//int max,min;
+//if(x>y && x>z && y<z ){
+//	max=x;
+//	min=y;
+//	cout<<"max element = "<<max<<"\n";
+//		cout<<"min element = "<<min<<"\n";
+//	
+//}
+//else if(x>y && x>z && y>z){
+//	max=x;
+//	min=z;
+//	cout<<"max element = "<<max<<"\n";
+//		cout<<"min element = "<<min<<"\n";
+//	
+//}
+//else if (y>x && y>z && z>x){
+//	max=y;
+//	min=x;
+//	cout<<"max element = "<<max<<"\n";
+//		cout<<"min element = "<<min<<"\n";
+//}
+//else if (y>x && y>z && z<x){
+//	max=y;
+//	min=z;
+//	cout<<"max element = "<<max<<"\n";
+//		cout<<"min element = "<<min<<"\n";
+//}
+//else if (z>x && z>y && z>x){
+//	max=z;
+//	min=x;
+//	cout<<"max element = "<<max<<"\n";
+//		cout<<"min element = "<<min<<"\n";
+//	}
+//	else if (z>x && z>y && x>y){
+//	max=z;
+//	min=y;
+//	cout<<"max element = "<<max<<"\n";
+//		cout<<"min element = "<<min<<"\n";
+//	}
+//	return 0;
+//}

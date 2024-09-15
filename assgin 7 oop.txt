@@ -1,0 +1,456 @@
+//task 1
+//#include <iostream>
+//#include <string>
+//
+//class Vehicle {
+//protected:
+//    std::string model;
+//    std::string registrationNumber;
+//    int speed; 
+//    double fuelCapacity;
+//    double fuelConsumption; 
+//
+//public:
+//   
+//    Vehicle(std::string model, std::string regNumber, int speed, double fuelCapacity, double fuelConsumption)
+//        : model(model), registrationNumber(regNumber), speed(speed), fuelCapacity(fuelCapacity), fuelConsumption(fuelConsumption) {}
+//
+//    
+//    virtual ~Vehicle() {}
+//
+//    double fuelNeeded(double distance) const {
+//        return distance * fuelConsumption;
+//    }
+//
+//    double distanceCovered(double time) const {
+//        return speed * time;
+//    }
+//
+//    virtual void display() const = 0;
+//};
+//
+//class Truck : public Vehicle {
+//private:
+//    double cargoWeightLimit; 
+//
+//public:
+//    
+//    Truck(std::string model, std::string regNumber, int speed, double fuelCapacity, double fuelConsumption, double cargoWeightLimit)
+//        : Vehicle(model, regNumber, speed, fuelCapacity, fuelConsumption), cargoWeightLimit(cargoWeightLimit) {}
+//
+//    void setCargoWeightLimit(double limit) {
+//        cargoWeightLimit = limit;
+//    }
+//
+//    double getCargoWeightLimit() const {
+//        return cargoWeightLimit;
+//    }
+//
+//    // Display method override
+//    void display() const override {
+//        std::cout << "Truck Information:\n";
+//        std::cout << "Model: " << model << "\nRegistration Number: " << registrationNumber << "\nSpeed: " << speed << " km/hour\n"
+//                  << "Fuel Capacity: " << fuelCapacity << " liters\nFuel Consumption: " << fuelConsumption << " liter/km\n"
+//                  << "Cargo Weight Limit: " << cargoWeightLimit << " kilograms\n";
+//    }
+//};
+//
+//class Bus : public Vehicle {
+//private:
+//    int numOfPassengers;
+//
+//public:
+//    // Parameterized constructor
+//    Bus(std::string model, std::string regNumber, int speed, double fuelCapacity, double fuelConsumption, int passengers)
+//        : Vehicle(model, regNumber, speed, fuelCapacity, fuelConsumption), numOfPassengers(passengers) {}
+//
+//    // Setter and getter for numOfPassengers
+//    void setNumOfPassengers(int passengers) {
+//        numOfPassengers = passengers;
+//    }
+//
+//    int getNumOfPassengers() const {
+//        return numOfPassengers;
+//    }
+//
+//    // Display method override
+//    void display() const override {
+//        std::cout << "Bus Information:\n";
+//        std::cout << "Model: " << model << "\nRegistration Number: " << registrationNumber << "\nSpeed: " << speed << " km/hour\n"
+//                  << "Fuel Capacity: " << fuelCapacity << " liters\nFuel Consumption: " << fuelConsumption << " liter/km\n"
+//                  << "Number of Passengers: " << numOfPassengers << "\n";
+//    }
+//};
+//
+//int main() {
+//    Truck myTruck("Ford", "XYZ123", 80, 150, 0.2, 5000);
+//    myTruck.display();
+//
+//    Bus myBus("Volvo", "ABC456", 60, 200, 0.1, 50);
+//    myBus.display();
+//
+//    return 0;
+//}
+//
+
+
+
+//task2
+//#include <iostream>
+//
+//class BankAccount {
+//protected:
+//    double balance;
+//
+//public:
+//    virtual void deposit(double amount) = 0;
+//    virtual void withdraw(double amount) = 0;
+//
+//    virtual ~BankAccount() {}
+//};
+//
+//class SavingsAccount : public BankAccount {
+//private:
+//    double interestRate;
+//
+//public:
+//    // Constructor
+//    SavingsAccount(double initialBalance, double rate) : interestRate(rate) {
+//        balance = initialBalance;
+//    }
+//
+//    
+//    void deposit(double amount) override {
+//        balance += amount;
+//        std::cout << "Deposit of $" << amount << " into Savings Account. New balance: $" << balance << std::endl;
+//    }
+//
+//    
+//    void withdraw(double amount) override {
+//        if (balance >= amount) {
+//            balance -= amount;
+//            std::cout << "Withdrawal of $" << amount << " from Savings Account. New balance: $" << balance << std::endl;
+//        } else {
+//            std::cout << "Insufficient funds in Savings Account. Withdrawal not allowed." << std::endl;
+//        }
+//    }
+//};
+//
+//class CurrentAccount : public BankAccount {
+//private:
+//    double overdraftLimit;
+//
+//public:
+//    // Constructor
+//    CurrentAccount(double initialBalance, double limit) : overdraftLimit(limit) {
+//        balance = initialBalance;
+//    }
+//
+//    
+//    void deposit(double amount) override {
+//        balance += amount;
+//        std::cout << "Deposit of $" << amount << " into Current Account. New balance: $" << balance << std::endl;
+//    }
+//
+//    
+//    void withdraw(double amount) override {
+//        if (balance + overdraftLimit >= amount) {
+//            balance -= amount;
+//            std::cout << "Withdrawal of $" << amount << " from Current Account. New balance: $" << balance << std::endl;
+//        } else {
+//            std::cout << "Insufficient funds in Current Account. Withdrawal not allowed." << std::endl;
+//        }
+//    }
+//};
+//
+//int main() {
+//    SavingsAccount savings(1000, 0.02);
+//    CurrentAccount current(1500, 500);
+//
+//    savings.deposit(200);
+//    savings.withdraw(150);
+//
+//    current.deposit(300);
+//    current.withdraw(200);
+//
+//    return 0;
+//}
+
+
+//task3
+//#include <iostream>
+//#include <cmath>
+//class Shape3D {
+//public:
+//    virtual double calculateVolume() const = 0;
+//    virtual double calculateSurfaceArea() const = 0;
+//
+//    virtual ~Shape3D() {}
+//};
+//
+//
+//class Sphere : public Shape3D {
+//private:
+//    double radius;
+//
+//public:
+//    // Constructor
+//    Sphere(double r) : radius(r) {}
+//
+//    
+//    double calculateVolume() const override {
+//        return (4.0 / 3.0) * M_PI * std::pow(radius, 3);
+//    }
+//
+//    
+//    double calculateSurfaceArea() const override {
+//        return 4.0 * M_PI * std::pow(radius, 2);
+//    }
+//};
+//
+//
+//class Cube : public Shape3D {
+//private:
+//    double sideLength;
+//
+//public:
+//    // Constructor
+//    Cube(double a) : sideLength(a) {}
+//
+//    
+//    double calculateVolume() const override {
+//        return std::pow(sideLength, 3);
+//    }
+//
+//    
+//    double calculateSurfaceArea() const override {
+//        return 6.0 * std::pow(sideLength, 2);
+//    }
+//};
+//
+//int main() {
+//    
+//    Sphere mySphere(3.0);
+//    Cube myCube(2.5);
+//
+//    std::cout << "Sphere: Volume = " << mySphere.calculateVolume() << ", Surface Area = " << mySphere.calculateSurfaceArea() << std::endl;
+//    std::cout << "Cube: Volume = " << myCube.calculateVolume() << ", Surface Area = " << myCube.calculateSurfaceArea() << std::endl;
+//
+//    return 0;
+//}
+
+//task4
+//#include <iostream>
+//
+//template <typename T>
+//T maxOfTwo(const T& a, const T& b) {
+//    return (a > b) ? a : b;
+//}
+//
+//int main() {
+//	
+//    int intResult = maxOfTwo(5, 10);
+//    double doubleResult = maxOfTwo(3.14, 2.71);
+//    char charResult = maxOfTwo('a', 'b');
+//
+//    cout << "Maximum of 5 and 10: " << intResult << std::endl;
+//   cout << "Maximum of 3.14 and 2.71: " << doubleResult << std::endl;
+//    cout << "Maximum of 'a' and 'b': " << charResult << std::endl;
+//
+//    return 0;
+//}
+
+
+//task5
+//#include <iostream>
+//
+//template <typename T>
+//class Calculator {
+//private:
+//    T num1;
+//    T num2;
+//
+//public:
+//    // Constructor
+//    Calculator(T a, T b) : num1(a), num2(b) {}
+//
+//    T add() const {
+//        return num1 + num2;
+//    }
+//   
+//    T subtract() const {
+//        return num1 - num2;
+//    }
+//    
+//    T multiply() const {
+//        return num1 * num2;
+//    }
+//
+//   
+//    T divide() const {
+//        return num1 / num2;
+//    }
+//};
+//
+//int main() {
+//   
+//    Calculator<int> intCalculator(10, 5);
+//    std::cout << "Addition: " << intCalculator.add() << endl;
+//    std::cout << "Subtraction: " << intCalculator.subtract() << endl;
+//    std::cout << "Multiplication: " << intCalculator.multiply() << endl;
+//    std::cout << "Division: " << intCalculator.divide() << endl;
+//
+//    Calculator<float> floatCalculator(15.5, 3.2);
+//    std::cout << "\nAddition: " << floatCalculator.add() <<endl;
+//    std::cout << "Subtraction: " << floatCalculator.subtract() << endl;
+//    std::cout << "Multiplication: " << floatCalculator.multiply() << endl;
+//    std::cout << "Division: " << floatCalculator.divide() <<endl;
+//
+//    return 0;
+//}
+
+//task6
+//#include <iostream>
+//#include <cmath>
+//#include <stdexcept>
+//
+//double safeSqrt(double number) {
+//    if (number < 0.0) {
+//        
+//        throw std::domain_error("Cannot calculate square root of a negative number");
+//    }
+//
+//    return std::sqrt(number);
+//}
+//
+//int main() {
+//    try {
+//        double result = safeSqrt(16.0);
+//        std::cout << "Square root of 16: " << result << std::endl;
+//    } catch (const std::domain_error& e) {
+//        std::cerr << "Error: " << e.what() << std::endl;
+//    }
+//
+//    return 0;
+//}
+
+
+//task7
+//#include <iostream>
+//#include <vector>
+//
+//
+//class Shape {
+//public:
+//    virtual void draw() const {
+//        std::cout << "Drawing a generic shape" << std::endl;
+//    }
+//
+//    virtual ~Shape() {} // Virtual destructor 
+//};
+//
+//
+//class Circle : public Shape {
+//public:
+//    void draw() const override {
+//        std::cout << "Drawing a circle" << std::endl;
+//    }
+//};
+//
+//
+//class Square : public Shape {
+//public:
+//    void draw() const override {
+//        std::cout << "Drawing a square" << std::endl;
+//    }
+//};
+//
+//class Triangle : public Shape {
+//public:
+//    void draw() const override {
+//        std::cout << "Drawing a triangle" << std::endl;
+//    }
+//};
+//
+//int main() {
+//    std::vector<Shape*> shapes;
+//
+//    shapes.push_back(new Circle());
+//    shapes.push_back(new Square());
+//    shapes.push_back(new Triangle());
+//
+//    for (const auto& shape : shapes) {
+//        shape->draw();
+//    }
+//
+//    for (const auto& shape : shapes) {
+//        delete shape;
+//    }
+//
+//    return 0;
+//}
+
+
+//task 8
+//#include <iostream>
+//
+//class Vehicle {
+//protected:
+//    int speed;
+//
+//public:
+//    // Constructor
+//    Vehicle(int initialSpeed) : speed(initialSpeed) {}
+//
+//    void speedShow() const {
+//        std::cout << "Current speed: " << speed << " km/h" << std::endl;
+//    }
+//
+//    virtual void speedUp() {
+//        speed += 10;
+//    }
+//};
+//
+//
+//class Car : public Vehicle {
+//public:
+//    // Constructor
+//    Car(int initialSpeed) : Vehicle(initialSpeed) {}
+//
+//
+//    void speedUp() override {
+//        speed += 20;
+//    }
+//};
+//
+//
+//class Bicycle : public Vehicle {
+//public:
+//    
+//    Bicycle(int initialSpeed) : Vehicle(initialSpeed) {}
+//
+//
+//    void speedUp() override {
+//        speed += 5;
+//    }
+//};
+//
+//int main() {
+//    Vehicle genericVehicle(30);
+//    Car myCar(50);
+//    Bicycle myBicycle(15);
+//
+//    genericVehicle.speedShow();
+//    genericVehicle.speedUp();
+//    genericVehicle.speedShow();
+//
+//    myCar.speedShow();
+//    myCar.speedUp();
+//    myCar.speedShow();
+//
+//    myBicycle.speedShow();
+//    myBicycle.speedUp();
+//    myBicycle.speedShow();
+//
+//    return 0;
+//}

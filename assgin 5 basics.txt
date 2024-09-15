@@ -1,0 +1,170 @@
+//task 1
+//#include<iostream>
+//using namespace std;
+//void print_num(int x){
+//	static int y=x;
+//	if(x==0){
+//		return;
+//	}
+//	print_num(x-1);
+//	if (y==x){
+//		cout<<x;
+//	}
+//	else {
+//		cout<<x<<", ";
+//	}
+//}
+//int main (){
+//	print_num(5);
+//}
+
+//task 2
+//#include<iostream>
+//using namespace std;
+//void print_even(int x){
+//	static int y=x;
+//	if(x==0){
+//		return;
+//	}
+//	print_even(x-1);
+//	if (x%2==0){
+//    if(y==x){
+//    	cout<<x;
+//	}
+//	else {
+//		cout<<x<<", ";
+//	}
+//}
+//}
+//int main (){
+//	print_even(20);
+//}
+
+//task 3
+//#include<iostream>
+//using namespace std;
+//void rev(int x){
+//	if(x==0){
+//		return;
+//	}
+//	cout<<x%10;
+//	rev(x/10);
+//}
+//int main (){
+//	rev(12345);
+//}
+
+//task4
+//#include<iostream>
+//using namespace std;
+//int fect(int x){
+//	if(x==1){
+//		return 1;
+//	}
+//	return x*fect(x-1);
+//}
+//int main(){
+//	cout<<fect(5);
+//}
+
+
+//task 5
+//#include<iostream>
+//using namespace std;
+//int rev (int x , int answer=0 )
+//{
+//	if (x==0){
+//		return answer;
+//	}
+//	answer=answer*10+(x%10);
+//	return rev(x/10 , answer);
+//	
+//}
+//bool ispalindrome(int x ){
+//	return (rev(x)==x);
+//}
+//int main (){
+//	cout<<boolalpha<<ispalindrome(12251);
+//}
+
+//task 6
+//#include<iostream>
+//using namespace std;
+//class circle {
+//	private :
+//		double radius;
+//		string colour;
+//		public :
+//			//constuctors
+//			circle ():radius (1),colour("red"){	}
+//			circle(double radius ):radius (radius),colour ("red"){}
+//			circle (double radius, string colour ):radius (radius),colour (colour){}
+//			//setters
+//			void set_radius(double radius):radius (radius){
+//				circle ::colour=colour;
+//			}
+//			void set_colour(string colour){
+//				circle ::colour =colour;
+//			}
+//			//getters
+//			double get_radius(){
+//				return radius;
+//			}
+//			string get_colour(){
+//				return colour;
+//			}
+//			//methods
+//			double get_area(){
+//				return 3.14159*radius;			
+//};
+//int main (){
+//	circle k(10 , "blue");
+//	cout<<k.get_area();
+//}
+
+//task 7
+//#include<iostream>
+//using namespace std;
+//class employee{
+//	private :
+//		int id , salary;
+//		string firstName , lastName;
+//		public :
+//			//constructor
+//			employee(int id , string firstName , string lastName , int salary ):id(id),firstName (firstName), lastName(lastName),salary(salary){}
+//			//setters
+//			void set_firstName(string firstName){
+//				employee::firstName=firstName;
+//			}
+//			void set_lastName(string lastName){
+//				employee::lastName=lastName;
+//			}
+//			void set_salary(int salary){
+//				employee::salary=salary;
+//			}
+//			void set_name(string firstName , string lastName){
+//				set_firstName(firstName);
+//				set_lastName(lastName);
+//			}
+//			//getters
+//			int get_id(){
+//				return id;
+//			}
+//			string get_firstName(){
+//				return firstName;
+//			}
+//			string get_lastName(){
+//				return lastName;
+//			}
+//			int get_salary(){
+//				return salary;
+//			}
+//			string get_name(){
+//				return firstName + " "+ lastName;
+//			}
+
+//};
+//int main (){
+//	employee e(12 , "hadeer", "gamal", 1298347);
+//	cout<<e.get_name();
+//}

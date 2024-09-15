@@ -1,0 +1,170 @@
+//task 1
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	for(int i =10 ; i>=1 ; i--){
+//		cout <<i<<" ";
+//	}
+//	return 0;
+//}
+
+//task 2
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	double sum=0;
+//	int num;
+//	for(int i=1 ; i<=10 ; i++){
+//		cin >>num;
+//		sum+=i;
+//	}
+//	double ave=sum/10;
+//	cout<<ave<<"\n";	
+//}
+
+//task 3
+//#include <iostream>
+//using namespace std;
+//int main (){
+//	int num;
+//	cin >>num;
+//	for(int i=1 ; i<=12 ; i++){
+//		cout<<i<<"*"<<num<<"="<<i*num<<"\n";
+//	}
+//	return 0;
+//}
+
+//task 4
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int m,n;
+//	int sum=0;
+//	cin>>m>>n;
+//	for (int i=m ; i<=n ; i++){
+//		sum+=i;
+//	}
+//	cout<<sum<<"."<<"\n";
+//}
+
+//task 5
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int num,sum=0;
+//	cout<<"please enter postive numbers :"<<"\n";
+//	cin>>num;
+//while (num>0){
+//	sum+=num;
+//	cin>>num;
+//}
+//cout<<sum<<"\n";		
+//}
+	
+
+
+//task 6
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int num,max=0;
+//	cin>>num;
+//	while (num>0){
+//		if(num>=max){
+//			max=num;
+//		}
+//		cin>>num;
+//	}
+//	cout<<max<<"\n";
+//}
+
+
+//task 7
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int num , count=0;
+//	cin >>num;
+//	for ( ;num>0 ; ){
+//		if(num%2==0){
+//			num/=2;
+//			count++;
+//		}
+//		else {
+//			num-=1;
+//			count++;
+//		}
+//	}
+//	cout<<count<<"\n";
+//	return 0;
+//}
+
+
+//task 8
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int x, y,res=1;
+//	cin >>x>>y;
+//	for(int i=1 ; i<=y ; i++){
+//		res=res*x;
+//	}
+//	cout<<res<<"\n";
+//}
+
+
+//task 9
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int num,count=0;
+//	for(int i=1 ; i<=10 ; i++){
+//		cin>>num;
+//		if(num%2!=0){
+//			count++;
+//		}
+//	}
+//	cout<<count<<"\n";
+//	return 0;
+//}
+
+
+//task 10
+//#include<iostream>
+//using namespace std;
+//int main(){
+//	int m,n,r;
+//	cin>>m>>n;
+//	while (n!=0){
+//		r=m%n;
+//		m=n;
+//		n=r;
+//	}
+//	cout<<m<<"\n";	
+//}
+
+
+//task 11
+//#include<iostream>
+//using namespace std;
+//int main(){
+//	int n,temp;
+//	cout<<"please enter the size of the array :"<<"\n";
+//	cin>>n;
+//	int arr[n];
+//	for(int i=0; i<n ; i++){
+//		cin>>arr[i];
+//	}
+//	for(int i=0 ; i<n; i++){
+//		for(int j=i+1 ; j<n ; j++){
+//		
+//			if(arr[i]>arr[j]){
+//				temp =arr[i];
+//				arr[i]=arr[j];
+//				arr[j]=temp;
+//		    }
+//		}
+  //  }
+//cout<<"the second max: "<<arr[n-2]<<"\n";
+//	return 0;
+//}

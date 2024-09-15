@@ -1,0 +1,336 @@
+//task 1
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int size ,sum=0;
+//	cin>>size;
+//	int arr[size];
+//	for(int i=0 ; i<size ; i++){
+//		cin>>arr[i];
+//	}
+//	for(int i=0 ; i<size ; i++){
+//		sum+=arr[i];
+//	}
+//	if(sum%2==0){
+//		cout<<"even";
+//	}
+//	else {
+//		cout<<"odd";
+//	}
+//	return 0;
+//	
+//}
+
+
+//task2
+//#include<iostream>
+//using namespace std;
+//int main(){
+//	int arr[5];
+//	for(int i=0 ; i<5 ; i++){
+//		cin>>arr[i];
+//	}
+//	for(int i=0 ; i<5 ; i++){
+//		
+//		arr[i]=-(arr[i]);
+//	}
+//	for(int i =0 ; i<5 ; i++){
+//		cout<<arr[i]<<"\n";
+//	}
+//	}
+
+
+//task 3
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int arr[3];
+//	for(int i =0; i<3 ; i++){
+//		cin>>arr[i];
+//		
+//	}
+//	cout<<endl;
+//	for(int i =0; i<3 ; i++){
+//		arr[i]=arr[i]*2;
+//	}
+//	
+//	for(int i =0; i<3 ; i++){
+//		cout<<arr[i]<<"\n";
+//	}
+//	
+//}
+
+//task 4
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int arr[3][3];
+//	int sum=0;
+//	for(int i=0; i<3; i++){
+//		for(int j=0 ; j<3 ; j++){
+//			cin>>arr[i][j];
+//		}
+//		cout<<endl;
+//	}
+//	for(int i=0 ; i<3 ; i++){
+//		for(int j=0 ; j<3 ; j++){
+//			if(arr[i][j]==arr[0][0] ||arr[i][j]==arr[1][1] || arr[i][j]==arr[2][2]){
+//				sum+=arr[i][j];
+//			}
+//		}
+//	}
+//	cout<<sum<<"\n";
+//}
+
+
+//task 5
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int count=0;
+//	int arr[5];
+//	for(int i=0; i<5; i++){
+//		cin>>arr[i];
+//	}
+//	for(int i=0 ; i<5 ; i++){
+//		for(int j=0; j<5; j++){
+//			int x=arr[i]+arr[j];
+//			if(x != 0){
+//				count++;
+//			}
+//			
+//		}
+//		if(count ==5){
+//			cout<<arr[i];
+//		}
+//	}
+//}
+
+//task 6
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int arr[5];
+//	for(int i=0 ; i<5 ; i++){
+//		cin>>arr[i];
+//	}
+//	cout<<endl;
+//	int x;
+//	cin>>x;
+//	x=x-1;
+//	for(int i=0 ; i<5 ; i++){
+//		if(i!=x){
+//			cout<<arr[i]<<" ";
+//		}
+//	}
+//}
+
+//task 7
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int arr1[3][3];
+//	for(int i=0 ; i<3 ; i++){
+//		for(int j=0 ;j<3 ; j++ ){
+//			cin>>arr1[i][j];
+//		}
+//		cout<<endl;
+//	}
+//	
+//	int arr2[3][3];
+//	for(int i=0 ; i<3 ; i++){
+//		for(int j=0 ;j<3 ; j++){
+//			cin>>arr2[i][j];
+//		}
+//		cout<<endl;
+//	}
+//	for(int i=0; i<3 ; i++){
+//		for(int j=0 ;j<3 ; j++){
+//		int x=arr1[i][j]+arr2[i][j];
+//		cout<<x<<"\n";	
+//		}
+//	}
+//	
+//}
+
+
+//task 8
+//#include<iostream>
+//using namespace std;
+//int main (){
+//	int arr[3][3];
+//	int row1=0,row2=0,row3=0;
+//	for(int i=0; i<3 ; i++){
+//		for(int j=0 ; j<3 ; j++){
+//			cin>>arr[i][j];
+//		}
+//		cout<<endl;
+//	}
+//	
+//	for(int i=0; i<3 ; i++){
+//		for(int j=0 ; j<3 ; j++){
+//			if(arr[i][j]==arr[0][0]|| arr[i][j]==arr[0][1] || arr[i][j]==arr[0][2]){
+//				row1+=arr[i][j];
+//			}
+//			else if(arr[i][j]==arr[1][0]|| arr[i][j]==arr[1][1] || arr[i][j]==arr[1][2]){
+//				row2+=arr[i][j];
+//			}
+//			else {
+//				row3+=arr[i][j];
+//			}
+//		}
+//	}
+//	cout<<"the first row : "<<row1<<endl;
+//	cout<<endl;
+//	cout<<"the second row : "<<row2<<endl;
+//	cout<<endl;
+//	cout<<"the third row : "<<row3<<endl;
+//}
+
+
+//task 9
+//i try to solve it a lot but i do not get the solution!
+
+
+//task 10
+//#include<iostream>
+//using namespace std;
+//void num(int x){
+//	cout<<x<<endl;
+//}
+//int main (){
+//	int a;
+//	cin>>a;
+//	num(a);
+//}
+
+
+//task 11
+//#include<iostream>
+//using namespace std;
+//float ave(int x,int y, int z){
+//	float aver=x+y+z/(float)3;
+//	return aver;
+//}
+//int main (){
+//	int a,b,c;
+//	cin>>a>>b>>c;
+//	cout<<ave(a,b,c)<<"\n";
+//}
+
+
+//task 12
+//#include<iostream>
+//using namespace std;
+//void maxandmin(int x, int y){
+//	if(x<y){
+//		cout<<"the max is : "<<y<<endl;
+//		cout<<endl;
+//		cout<<"the min : "<<x<<endl;
+//	}
+//}
+//int main (){
+//	int a,b;
+//	cin>>a>>b;
+//	maxandmin(a,b);
+//}
+
+
+//task 13
+//#include<iostream>
+//using namespace std;
+//void num(int x){
+//	if(x%2==0){
+//		cout<<"even"<<"\n";
+//	}
+//	else {
+//		cout<<"odd"<<"\n";
+//	}
+//}
+//int main (){
+//	int a;
+//	cin>>a;
+//	num(a);
+//}
+
+
+//task 14
+//#include<iostream>
+//using namespace std;
+//bool num(int x){
+//	int count=0;
+//	for(int i=1 ; i<=x ; i++){
+//		if(x%i==0){
+//			count++;
+//		}	
+//	}
+//	if(count==2){
+//		return true;
+//	}
+//	else {
+//		return false;
+//	}
+//	
+//}
+//int main (){
+//	int a;
+//	cin>>a;
+//	cout<<num(a)<<"\n";
+//	
+//}
+
+
+
+//task 15
+//#include<iostream>
+//using namespace std;
+//int cube(int x){
+//	int y=1;
+//	for(int i=1; i<=3 ;i++ ){
+//		y*=x;
+//	}
+//	return y;
+//}
+//int main (){
+//	int a;
+//	cin>>a;
+//	cout<<cube(a);
+//}
+
+
+//task 16
+//#include<iostream>
+//using namespace std;
+//void circle(double  x){
+//	double diameter=x*2;
+//	double circum=2*3.14*x;
+//	double area =3.14*(x*x);
+//	cout<< diameter<<"\n";
+//	cout <<circum<<"\n";
+//	cout<< area<<"\n";
+//}
+//int main (){
+//	double a;
+//	cin>>a;
+//	circle(a);
+//	
+//}
+
+
+
+//task 17
+//#include<iostream>
+//using namespace std;
+//void divisors(int x){
+//	for(int i=1 ; i<=x; i++){
+//		if(x%i==0){
+//			cout<<i<<"\n";
+//		}
+//	}
+//}
+//int main (){
+//	int a;
+//	cin>>a;
+//	divisors(a);
+//}
+

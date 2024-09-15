@@ -1,0 +1,179 @@
+//task 1
+//#include <iostream>
+//#include <cmath>
+//#include <string>
+//
+//class Circle {
+//private:
+//    double radius;
+//    std::string color;
+//
+//public:
+//    // Constructors
+//    Circle() : radius(0.1), color("red") {}
+//    Circle(double radius) : radius(radius), color("red") {}
+//    Circle(double radius, std::string color) : radius(radius), color(color) {}
+//
+//    // Getters
+//    double getRadius() const {
+//        return radius;
+//    }
+//
+//    std::string getColor() const {
+//        return color;
+//    }
+//
+//    // Setters
+//    void setRadius(double newRadius) {
+//        radius = newRadius;
+//    }
+//
+//    void setColor(std::string newColor) {
+//        color = newColor;
+//    }
+//
+//    // Other methods
+//    double getArea() const {
+//        return M_PI * pow(radius, 2);
+//    }
+//};
+//
+//class Cylinder : public Circle {
+//private:
+//    double height;
+//
+//public:
+//    // Constructors
+//    Cylinder() : Circle(), height(1.0) {}
+//    Cylinder(double radius) : Circle(radius), height(1.0) {}
+//    Cylinder(double radius, double height) : Circle(radius), height(height) {}
+//    Cylinder(double radius, double height, std::string color) : Circle(radius, color), height(height) {}
+//
+//    // Getter for height
+//    double getHeight() const {
+//        return height;
+//    }
+//
+//    // Setter for height
+//    void setHeight(double newHeight) {
+//        height = newHeight;
+//    }
+//
+//    // Calculate volume
+//    double getVolume() const {
+//        return getArea() * height;
+//    }
+//};
+//
+//int main() {
+//    
+//    Circle circle1;
+//    std::cout << "Circle Radius: " << circle1.getRadius() << ", Color: " << circle1.getColor() << ", Area: " << circle1.getArea() << std::endl;
+//
+//    Circle circle2(0.5, "blue");
+//    std::cout << "Circle Radius: " << circle2.getRadius() << ", Color: " << circle2.getColor() << ", Area: " << circle2.getArea() << std::endl;
+//
+//    Cylinder cylinder1;
+//    std::cout << "Cylinder Radius: " << cylinder1.getRadius() << ", Height: " << cylinder1.getHeight() << ", Color: " << cylinder1.getColor() << ", Volume: " << cylinder1.getVolume() << std::endl;
+//
+//    Cylinder cylinder2(0.8, 2.5, "green");
+//    std::cout << "Cylinder Radius: " << cylinder2.getRadius() << ", Height: " << cylinder2.getHeight() << ", Color: " << cylinder2.getColor() << ", Volume: " << cylinder2.getVolume() << std::endl;
+//
+//    return 0;
+//}
+
+
+
+
+
+
+//task2
+//#include <iostream>
+//#include <cmath>
+//
+//class MyComplex {
+//private:
+//    double real;
+//    double imag;
+//
+//public:
+//    // Constructors
+//    MyComplex() : real(0.0), imag(0.0) {}
+//    MyComplex(double real, double imag) : real(real), imag(imag) {}
+//
+//    // Getters
+//    double getReal() const {
+//        return real;
+//    }
+//
+//    double getImag() const {
+//        return imag;
+//    }
+//
+//    // Setters
+//    void setReal(double newReal) {
+//        real = newReal;
+//    }
+//
+//    void setImag(double newImag) {
+//        imag = newImag;
+//    }
+//
+//    void setValue(double newReal, double newImag) {
+//        real = newReal;
+//        imag = newImag;
+//    }
+//
+//    // Methods
+//    bool isReal() const {
+//        return imag == 0.0;
+//    }
+//
+//    bool isImaginary() const {
+//        return real == 0.0;
+//    }
+//
+//    bool equals(double otherReal, double otherImag) const {
+//        return (real == otherReal) && (imag == otherImag);
+//    }
+//
+//    bool equals(const MyComplex& another) const {
+//        return (real == another.real) && (imag == another.imag);
+//    }
+//
+//    double magnitude() const {
+//        return sqrt(real * real + imag * imag);
+//    }
+//
+//    MyComplex& addInto(const MyComplex& right) {
+//        real += right.real;
+//        imag += right.imag;
+//        return *this;
+//    }
+//
+//    MyComplex addNew(const MyComplex& right) const {
+//        return MyComplex(real + right.real, imag + right.imag);
+//    }
+//};
+//
+//int main() {
+//	
+//    MyComplex complex1;
+//    std::cout << "Complex1: Real = " << complex1.getReal() << ", Imag = " << complex1.getImag() << std::endl;
+//
+//    MyComplex complex2(3.0, 4.0);
+//    std::cout << "Complex2: Real = " << complex2.getReal() << ", Imag = " << complex2.getImag() << std::endl;
+//
+//    std::cout << "Complex2 is real: " << std::boolalpha << complex2.isReal() << std::endl;
+//    std::cout << "Complex2 is imaginary: " << std::boolalpha << complex2.isImaginary() << std::endl;
+//    std::cout << "Magnitude of Complex2: " << complex2.magnitude() << std::endl;
+//
+//    complex1.addInto(complex2);
+//    std::cout << "After adding Complex2 into Complex1: Real = " << complex1.getReal() << ", Imag = " << complex1.getImag() << std::endl;
+//
+//    MyComplex sum = complex1.addNew(complex2);
+//    std::cout << "Sum of Complex1 and Complex2: Real = " << sum.getReal() << ", Imag = " << sum.getImag() << std::endl;
+//
+//    return 0;
+//}
+//
